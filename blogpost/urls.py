@@ -21,4 +21,5 @@ from debug_toolbar.toolbar import debug_toolbar_urls  # type: ignore[import-unty
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('post/', include('post.urls')),
-] + debug_toolbar_urls()
+    path('__debug__/', include('debug_toolbar.urls')),  # type: ignore[attr-defined]
+]
